@@ -6,7 +6,7 @@ const post = {
   createdAt: Date.now(),
   title: 'Post Title',
   body: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, velit?',
-  slug: '/',
+  slug: '1',
 }
 
 const BlogPage = () => {
