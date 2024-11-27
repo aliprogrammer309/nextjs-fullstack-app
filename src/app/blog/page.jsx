@@ -17,7 +17,6 @@ const BlogPage = async () => {
   return (
     <div className={styles.container}>
       {posts.map((post) => {
-        console.log("post: ", post.id);
         return (
           <div className={styles.post} key={post.id}>
             <PostCard post={post} />
