@@ -8,7 +8,7 @@ const PostCard = ({ post }) => {
       <div className={styles.top}>
         {/* {post.img && ( */}
           <div className={styles.imgContainer}>
-            <Image src="https://images.pexels.com/photos/9800009/pexels-photo-9800009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" fill className={styles.img} />
+            <Image src={post.img} alt="" fill className={styles.img} />
           </div>
         {/* )} */}
         <span className={styles.date}>
@@ -18,8 +18,8 @@ const PostCard = ({ post }) => {
       </div>
       <div className={styles.bottom}>
         <h1 className={styles.title}>{post.title}</h1>
-        <p className={styles.desc}>{post.body}</p>
-        <Link className={styles.link} href={`/blog/${post.id}`}>
+        <p className={styles.desc}>{post.desc}</p>
+        <Link className={styles.link} href={`/blog/${post.slug}`}>
           READ MORE
         </Link>
       </div>

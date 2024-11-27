@@ -2,20 +2,22 @@ import Image from "next/image";
 import styles from "./singlePost.module.css";
 import PostUser from "../../../components/postUser/postUser";
 import { Suspense } from "react";
+import { getPost } from "../../../lib/data";
 
-const fetchData = async (slug) => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+// const fetchData = async (slug) => {
+//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
 
-  if (!res.ok) {
-    throw new Error("Error getching the posts!");
-  }
+//   if (!res.ok) {
+//     throw new Error("Error getching the posts!");
+//   }
 
-  return res.json();
-};
+//   return res.json();
+// };
 
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
-  const post = await fetchData(slug);
+  // const post = await fetchData(slug);
+  const post = await getPost(slug);
 
   return (
     <div className={styles.container}>
