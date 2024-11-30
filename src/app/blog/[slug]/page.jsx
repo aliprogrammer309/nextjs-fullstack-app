@@ -42,7 +42,7 @@ const SinglePostPage = async ({ params }) => {
             </span>
           </div>
         </div>
-        <div className={styles.content}>{post.body}</div>
+        <div className={styles.content}>{post.desc}</div>
       </div>
     </div>
   );
